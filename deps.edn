@@ -1,0 +1,2 @@
+{:deps
+ {clucie/clucie {:mvn/version "0.4.2"}}}
