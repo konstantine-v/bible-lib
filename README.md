@@ -1,7 +1,12 @@
 # Bible Lib
+
+_Note_ This library is unfinished, so use it as a stepping-stone for your own application or wait until a more stable version is out.
+
+## What is this?
+
 A library for interacting with and parsing the data within the bible.
 
-The purpose of this is to work with a large dataset, parse it, and compare data.
+The purpose of this is to work with a large dataset, parse it, and compare data. My goal is to utilize this within a GUI application and for others to be able to do as they with the library.
 
 ## Usage
 TODO
