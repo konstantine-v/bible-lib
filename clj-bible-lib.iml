@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module cursive.leiningen.project.LeiningenProjectsManager.displayName="clj-bible-lib:0.1.0-SNAPSHOT" cursive.leiningen.project.LeiningenProjectsManager.isLeinModule="true" type="JAVA_MODULE" version="4">
+<module type="JAVA_MODULE" version="4">
+  <component name="BuildSystem">
+    <option name="buildSystemId" value="LEININGEN" />
+    <option name="displayName" value="clj-bible-lib:0.1.0-SNAPSHOT" />
+  </component>
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/classes" />
@@ -14,7 +18,20 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Leiningen: clojure-complete:0.2.5" level="project" />
+    <orderEntry type="library" name="Leiningen: clucie:0.4.2" level="project" />
+    <orderEntry type="library" name="Leiningen: com.ibm.icu/icu4j:62.1" level="project" />
+    <orderEntry type="library" name="Leiningen: commons-codec:1.10" level="project" />
     <orderEntry type="library" name="Leiningen: nrepl:0.6.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-analyzers-common:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-analyzers-icu:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-analyzers-kuromoji:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-analyzers-phonetic:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-analyzers-smartcn:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-analyzers-stempel:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-core:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-queries:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-queryparser:7.5.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.lucene/lucene-sandbox:7.5.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/clojure:1.10.1" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/core.specs.alpha:0.2.44" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/spec.alpha:0.2.176" level="project" />

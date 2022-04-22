@@ -1,4 +1,4 @@
-(ns clj-bible-lib.core-test
+(ns bible-lib.core-test
   (:require [clojure.test :refer :all]
             [clj-bible-lib.core :refer :all]))
 
