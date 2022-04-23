@@ -1,6 +1,6 @@
 (ns bible-lib.core-test
   (:require [clojure.test :refer :all]
-            [clj-bible-lib.core :refer :all]))
+            [bible-lib.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
