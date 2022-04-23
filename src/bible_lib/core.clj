@@ -2,7 +2,7 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
-(def data-loc "resources/")                                 ;can also use io/resource for this
+(def data-loc "resources/")                                 ;local project directory
 (def data-bible-name "kjv.tsv")                             ;name for data file
 (def data-bible-loc (str data-loc data-bible-name))         ;used for .exists
 
@@ -21,7 +21,6 @@
   (vec (for [data (str/split-lines (slurp data-bible-loc))]
     (str/split data #"\t"))))
 
-;Memoize bible data to speed up all other actions requiring this data
 (def bible-data (memoize data->formatted-vector))           ;ex. (first (data-bible)) => < .1 msec
 
 (defn format-verse-number [verse]
@@ -43,11 +42,9 @@
   ;TODO - Change Case for all words
   (sort-by last (frequencies (str/split (string-data data) #" ")))) ;Print to file using write-file
 
-
-
 (defn update-books-list []
   "Parse data file and gather information on the books within"
-  (vec (dedupe (for [data (cr/bible-data)]
+  (vec (dedupe (for [data (bible-data)]
                  (first data)))))
 
 (def data-books-list (memoize update-books-list))           ;cache books list
