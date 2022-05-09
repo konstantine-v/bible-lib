@@ -1,11 +1,13 @@
 # Bible Lib
 
-_Note_ This library is unfinished, so use it as a stepping-stone for your own application or wait until a more stable version is out.
+*Note* This library is a work in progress, so use it as a stepping-stone for your own application or help move it along by making a PR to help complete it.
+
+This is currently not production ready, but the intention is to get it to a point where it can be. Feel free 
 
 ## What is this?
 A library for interacting with and parsing the data within the bible.
 
-The purpose of this is to work with a large dataset, parse it, and compare data. My goal is to utilize this within a GUI application and for others to be able to do as they with the library.
+This library is meant for comparing, parsing, and searching data within a dataset as well as consuming APIs and ensuring the data is formatted to be used as intended within other applications.
 
 *Note*
 This utilizes the Luke Smith edited version of the KJV bible for testing purposes. In the future I plan for it to consume API data and built data structured in a similar way for offline consumption.
@@ -13,16 +15,41 @@ This utilizes the Luke Smith edited version of the KJV bible for testing purpose
 ## Usage
 Using your Clojure REPL you can test out some of the functions and see the results;
 
+Using this library in your project
+```clojure
+(ns bible-lib.core 
+  (:require [bible-lib :as bible]))
+
+(def bible-location "~/Downloads/bible_nkj.txt")
+
+(first (bible/data->list bible-location))
+
+(write-file (str/join " " (bible/data-books-list (bible/data-bible-loc)))
+            "books_list.txt")
+```
+
 ```clojure
 ;Example for returning the first verse in Genesis
-(first (bible-lib.core/bible-data)) ;=> ["Genesis" "Ge" "1" "1" "1" "In the beginning God created the heaven and the earth."]
+(first (bible/data->list bible/data-bible-loc)) ;=> ["Genesis" "Ge" "1" "1" "1" "In the beginning God created the heaven and the earth."]
 ```
 
 Here's another example for getting the frequency of words used in the bible
 ```clojure
-(bible-lib.core/frequency-data (bible-lib.core/bible-data))
+(frequency-data (data->list data-bible-loc))
 ```
 [View result](https://gist.github.com/MaterialFuture/906317ac3c9e41ad7da76457827175c3)
+
+If you want to write results to a file you can do so like below
+```clojure
+ (frequency-data (data->list data-bible-loc))
+```
+
+## Future Plans
+
+Future plans will be to take API data or other bible datasets and format them into hash maps;
+```clojure
+{:book "1 John" :verse "3:16" :content "For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life." ...}
+```
 
 ## License
 TODO: Change license
